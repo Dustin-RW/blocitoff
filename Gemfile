@@ -42,3 +42,5 @@ group :development do
  gem 'rails_db'
  # store Sendgrid and Devise credentials as environment variables
  gem 'figaro', '1.0'
+
+ gem 'devise'
