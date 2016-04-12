@@ -44,3 +44,5 @@ group :development do
  gem 'figaro', '1.0'
 
  gem 'devise'
+
+ gem 'simple_form'

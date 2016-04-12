@@ -1,28 +1,38 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Blocitoff</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-    <%= csrf_meta_tags %>
-  </head>
-  <body>
-    <div class="container">
-      <div class="nav nav-tabs">
-        <p class="pull-left notice"><%= notice %></p>
-        <p class="pull-left alert"><%= alert %></p>
-        <div class="row">
-        <div class="pull-left home-button"><%= link_to "Home", root_path %></div>
-        <div class="pull-right user-info">
-          <%= link_to "Sign in", new_user_session_path %>
-          |
-          <%= link_to "Sign up", new_user_registration_path %></div>
+    <head>
+        <title>Blocitoff</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+        <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+        <%= csrf_meta_tags %>
+    </head>
+    <body>
+        <div class="container">
+            <div class="nav nav-tabs">
+                <div class="row">
+                    <div class="pull-right user-info">
+                        <% if user_signed_in? %>
+                        Signed in as:
+                        <strong><%= current_user.email %></strong>
+                        |
+                        <%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %>
+                        -
+                        <%= link_to "Sign Out", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
+                    <% else %>
 
-      </div>
-    </div>
+                        <%= link_to "Sign Up", new_user_registration_path, :class => 'navbar-link'  %>
+                        -
+                        <%= link_to "Sign In", new_user_session_path, :class => 'navbar-link'  %>
+                        <% end %>
+                    </div>
+                </div>
+            </div>
+            <p class="notice", align="center"><font color="red"><%= notice %></font></p>
+            <p class="alert", align="center"><font color="red"><%= alert %></font></p>
+        </div>
 
-    <%= yield %>
+        <%= yield %>
 
-  </body>
+    </body>
 </html>
