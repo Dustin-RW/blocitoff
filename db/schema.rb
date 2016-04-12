@@ -22,6 +22,7 @@ ActiveRecord::Schema.define(version: 20160412042351) do
   end
 
   add_index "items", ["user_id"], name: "index_items_on_user_id"
+end
 
 ActiveRecord::Schema.define(version: 20160412035152) do
 

@@ -1,3 +1,9 @@
 <div class="center">
-Hello <%= @user.email %>
+    <p>Items:</p><br />
+    <% @user.items.each do |item| %>
+      <ul>
+        <%= item %>
+      </ul>
+    <% end %>
 </div>
+<%= render 'items/form', item: Item.new, user: @user %>

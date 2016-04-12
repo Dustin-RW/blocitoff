@@ -7,6 +7,16 @@ class ItemsController < ApplicationController
 
     @item.user = current_user
 
+    @new_item = Item.new
+
+    if @item.save!
+      flash[:notice] = 'Item saved successfully'
+    else
+      flash[:alert] = 'Item failed to save'
+    end
+
+    redirect_to root_path
+
   end
 
   private
