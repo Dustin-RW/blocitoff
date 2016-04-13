@@ -46,3 +46,5 @@ group :development do
  gem 'devise'
 
  gem 'simple_form'
+
+ gem 'faker'
