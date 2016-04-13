@@ -1,0 +1,12 @@
+
+<div class="new-item">
+
+<%= form_for [user, item], {:class => "form-inline"} do |f| %>
+    <%= f.label "Add an item here:" %>
+    <%= f.text_field :name %>
+
+
+  <%= f.submit "Submit", class: 'btn btn-primary pull-right' %>
+<% end %>
+
+</div>
