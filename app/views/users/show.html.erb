@@ -1,9 +1,5 @@
 <div class="center">
-    <p>Items:</p><br />
-    <% @user.items.each do |item| %>
-      <ul>
-        <%= item %>
-      </ul>
-    <% end %>
+    <p>Items:</p><br/>
+    <%= render 'items/item' %>
 </div>
 <%= render 'items/form', item: Item.new, user: @user %>
