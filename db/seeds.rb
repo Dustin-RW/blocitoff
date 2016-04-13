@@ -6,4 +6,41 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-require 'random_data'
+
+require 'faker'
+include Faker
+
+50.times do
+
+  User.create!(
+
+    name: "#{Name.name}",
+    email: "#{Internet.email}",
+    password: "#{Internet.password(8)}"
+
+  )
+
+end
+
+admin = User.create!(
+  name: 'Admin User',
+  email: 'admin@example.com',
+  password: 'helloworld'
+  )
+
+users = User.all
+
+100.times do
+
+  Item.create!(
+    user: users.sample,
+    name: "Complete #{Beer.name}"
+  )
+
+end
+
+items = Item.all
+
+puts "Seeds Finished"
+puts "#{User.count} users created"
+puts "#{Item.count} items created"
