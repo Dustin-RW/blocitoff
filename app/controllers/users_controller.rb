@@ -5,6 +5,8 @@ class UsersController < ApplicationController
   end
 
   def show
+    
+
     if current_user
       @user = current_user
       @items = current_user.items

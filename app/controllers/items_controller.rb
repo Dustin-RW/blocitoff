@@ -1,13 +1,13 @@
 class ItemsController < ApplicationController
   def create
 
-    @user = current_user
+    # @user = current_user
 
-    @item = @user.items.new(item_params)
+    @item = current_user.items.new(item_params)
 
-    @item.user = current_user
+    # @item.user = current_user
 
-    @new_item = Item.new
+    # @new_item = Item.new
 
     if @item.save!
       flash[:notice] = 'Item saved successfully'
