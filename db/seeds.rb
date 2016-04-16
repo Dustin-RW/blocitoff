@@ -25,7 +25,7 @@ end
 admin = User.create!(
   name: 'Admin User',
   email: 'admin@example.com',
-  password: 'helloworld'
+  password: 'helloworld',
   )
 
 users = User.all
@@ -38,6 +38,17 @@ users = User.all
   )
 
 end
+
+5.times do #testing of rake todo:delete_items
+
+  seven_day_items = Item.create!(
+    user: admin,
+    name: "complete #{Beer.name}",
+    created_at: (Time.now - 7.days)
+    )
+
+end
+
 
 items = Item.all
 
