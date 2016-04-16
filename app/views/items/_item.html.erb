@@ -1,5 +1,11 @@
 <% @user.items.each do |item| %>
-  <ul>
-    <p id="item-<%= item.id %>"><%= item.name %> | <%= link_to "", [@user, item], method: :delete, class: 'glyphicon glyphicon-ok', remote: true %></p>
-  </ul>
+<ul>
+    <p id="item-<%= item.id %>"><%= item.name %>
+        |
+        <%= distance_of_time_in_words(item.created_at, Time.now, include_seconds: true) %>
+        <strong class="pull-right">
+            <%= link_to "", [@user, item], method: :delete, class: 'glyphicon glyphicon-ok', remote: true %>
+        </strong>
+    </p>
+</ul>
 <% end %>
