@@ -1,5 +1,5 @@
 class ItemsController < ApplicationController
-  def create
+    def create
 
     @item = current_user.items.new(item_params)
 
@@ -39,4 +39,5 @@ class ItemsController < ApplicationController
     params.require(:item).permit(:name)
 
   end
+
 end
