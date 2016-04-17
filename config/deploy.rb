@@ -3,6 +3,7 @@ lock '3.4.1'
 
 set :application, 'my_app_name'
 set :repo_url, 'git@example.com:me/my_repo.git'
+set :whenever_roles, ->{ [:web, :app]}
 
 # Default branch is :master
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
