@@ -43,7 +43,7 @@ end
 
   seven_day_items = Item.create!(
     user: admin,
-    name: "complete #{Beer.name}",
+    name: "Try beer #{Beer.name}",
     created_at: (Time.now - 7.days)
     )
 

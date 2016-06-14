@@ -9,8 +9,8 @@
     </head>
     <body>
         <div class="container">
-            <div class="nav nav-tabs">
-                <div class="row">
+          <nav>
+              <div class="row">
                     <div class="pull-right user-info">
                         <% if user_signed_in? %>
                         Signed in as:
@@ -28,7 +28,7 @@
                         <%= link_to "Sign In", new_user_session_path, :class => 'navbar-link'  %>
                         <% end %>
                     </div>
-                </div>
+                </nav>
             </div>
             <div class="flash">
             <p class="notice", align="center"><font color="red"><%= notice %></font></p>
