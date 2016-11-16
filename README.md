@@ -25,3 +25,7 @@ Blocitoff will aim to keep to-do lists manageable by automatically deleting to-d
 * ...see how old a to-do item is
 
 * ...see my to-dos should be automatically delete seven days after their creation date
+
+**How to use thus far**
+
+* Log in with: **email:** _admin@example.com_ **password** _helloworld_ (_see_ seeds.rb)
