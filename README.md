@@ -1,6 +1,5 @@
-README.md
-
-Project: blocitoff
+blocitoff
+=================
 
 **Use Case**
 
@@ -10,19 +9,19 @@ Blocitoff will aim to keep to-do lists manageable by automatically deleting to-d
 
 **User Stories**
 
-User Story	Difficulty Rating
-* As a user, I want to sign up for a free account by providing a user name, password and email
+**As a user, I want to...***
+* ...sign up for a free account by providing a user name, password and email
 
-* As a user, I want to sign in and out of Blocitoff
+* ...sign in and out of Blocitoff (_devise gem_)
 
-* As a user, I want to see my profile page
+* ...see my profile page
 
-* As a user, I want to create multiple to-do items
+* ...create multiple to-do items
 
-* As a developer, I want to seed the development database automatically with users and to-do items
+* ...seed the development database automatically with users and to-do items (_faker gem_)
 
-* As a user, I want to mark to-do items as complete and have them deleted
+* ...mark to-do items as complete and have them deleted
 
-* As a user, I want to see how old a to-do item is
+* ...see how old a to-do item is
 
-* As a user, my to-dos should be automatically deleted seven days after their creation date
+* ...see my to-dos should be automatically delete seven days after their creation date
